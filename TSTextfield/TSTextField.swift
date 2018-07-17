@@ -20,6 +20,7 @@ import UIKit
     
     @objc optional func tsTextFieldDidEndEditing(_ textField: UITextField)
     
+    @available(iOS 10.0, *)
     @objc optional func tsTextFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason)
     
     @objc optional func tsTextFieldShouldClear(_ textField: UITextField) -> Bool
