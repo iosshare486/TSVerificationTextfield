@@ -41,7 +41,7 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "http://gitlab.caiqr.com/ios_module/TSVerificationTextfield.git", :tag => "#{s.version}" }
 
-  s.source_files  = "TSVerificationTextfield/TSTextfield/*"
+  s.source_files  = "TSTextfield/*"
 
   s.swift_version = '4.0'
 
