@@ -20,9 +20,6 @@ import UIKit
     
     @objc optional func tsTextFieldDidEndEditing(_ textField: UITextField)
     
-    @available(iOS 10.0, *)
-    @objc optional func tsTextFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason)
-    
     @objc optional func tsTextFieldShouldClear(_ textField: UITextField) -> Bool
     
     @objc optional func tsTextFieldShouldReturn(_ textField: UITextField) -> Bool
@@ -90,14 +87,13 @@ open class TSTextField: UITextField, UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
-        @available(iOS 10.0, *)
         self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
     }
     
     //结束编辑
     @available(iOS 10.0, *)
     public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField, reason: reason)
+        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
     }
     
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
