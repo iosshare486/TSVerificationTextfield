@@ -90,6 +90,7 @@ open class TSTextField: UITextField, UITextFieldDelegate {
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
+        @available(iOS 10.0, *)
         self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
     }
     
