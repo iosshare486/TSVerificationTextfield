@@ -90,11 +90,11 @@ open class TSTextField: UITextField, UITextFieldDelegate {
         self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
     }
     
-    //结束编辑
-    @available(iOS 10.0, *)
-    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
-    }
+//    //结束编辑
+//    @available(iOS 10.0, *)
+//    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+//        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
+//    }
     
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return self.tsTextfieldDelegate?.tsTextFieldShouldClear?(textField) ?? true
