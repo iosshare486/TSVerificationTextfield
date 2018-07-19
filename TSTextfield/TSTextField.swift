@@ -10,7 +10,7 @@ import UIKit
 
 @objc public protocol tsTextfieldProtocol {
     //是否合法的回调
-    @objc optional func eligibleStatusCallBack (status : Bool)
+    @objc optional func eligibleStatusCallBack (textField: UITextField, status : Bool)
     
     @objc optional func tsTextFieldShouldBeginEditing(_ textField: UITextField) -> Bool
     
@@ -243,7 +243,7 @@ open class TSTextField: UITextField, UITextFieldDelegate {
         if self.text?.count == 0 {
             self.isEligible = false
         }
-        self.tsTextfieldDelegate?.eligibleStatusCallBack?(status: isEligible)
+        self.tsTextfieldDelegate?.eligibleStatusCallBack?(textField: self, status: isEligible)
     }
     
     open override func canPerformAction(_ action: Selector, withSender sender: Any?) -> Bool {
