@@ -37,12 +37,12 @@ public enum TSTextFieldLimitType {
 }
 
 public struct tsTextFieldLimitRange {
-    init(minNum : Int,maxNum : Int) {
+    public init(minNum : Int,maxNum : Int) {
         self.maxNum = maxNum < minNum ? minNum : maxNum
         self.minNum = minNum
     }
-    let minNum : Int?
-    var maxNum : Int?
+    public var minNum : Int?
+    public var maxNum : Int?
 }
 
 open class TSTextField: UITextField, UITextFieldDelegate {
@@ -85,16 +85,16 @@ open class TSTextField: UITextField, UITextFieldDelegate {
     public func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
         return self.tsTextfieldDelegate?.tsTextFieldShouldEndEditing?(textField) ?? true
     }
-    
+
     public func textFieldDidEndEditing(_ textField: UITextField) {
         self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
     }
     
-//    //结束编辑
-//    @available(iOS 10.0, *)
-//    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-//        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
-//    }
+    //结束编辑
+    @available(iOS 10.0, *)
+    public func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        self.tsTextfieldDelegate?.tsTextFieldDidEndEditing?(textField)
+    }
     
     public func textFieldShouldClear(_ textField: UITextField) -> Bool {
         return self.tsTextfieldDelegate?.tsTextFieldShouldClear?(textField) ?? true
