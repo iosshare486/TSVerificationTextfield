@@ -27,7 +27,7 @@ import UIKit
 }
 
 public enum TSTextFieldLimitType {
-    case tsTextFieldPhoneNumberType(insertPlaceholder : Bool)         //手机号
+    case tsTextFieldPhoneNumberType(insertSpace : Bool)         //手机号
     case tsTextFieldEmailType               //邮箱
     case tsTextFieldIDCardType              //身份证
     case tsTextFieldCardCodeType            //银行卡号
