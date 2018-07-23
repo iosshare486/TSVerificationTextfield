@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "TSVerificationText"
-  s.version      = "1.0.5"
+  s.version      = "1.0.6"
   s.summary      = "A VerificationText Demo"
 
   # This description is used to generate tags and improve search results.
@@ -47,5 +47,6 @@ Pod::Spec.new do |s|
 
   s.requires_arc = true
   s.dependency 'TSCustomUIKit'
+  s.dependency 'Kingfisher'
 
 end
